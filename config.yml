@@ -1,0 +1,43 @@
+---
+
+
+- hosts: ELK-Ubuntu
+  tags: elk-ubuntu, both-elk
+  become: true
+  roles:
+    - ELK-Ubuntu
+
+- hosts: ELK-CentOS
+  tags: elk-centos, both-elk
+  become: true
+  roles:
+    - ELK-CentOS
+
+- hosts: IGP-CentOS
+  tags: igp-centos, both-igp
+  become: true
+  roles:
+    - IGP-CentOS
+
+
+- hosts: IGP-Ubuntu
+  tags: igp-ubuntu, both-igp
+  become: true
+  roles:
+    - IGP-Ubuntu
+
+
+
+- hosts: LS-CentOS
+  tags: ls-centos, both-ls
+  become: true
+  roles:
+    - LS-CentOS
+
+
+- hosts: LS-Ubuntu
+  tags: ls-ubuntu, both-ls
+  become: true
+  roles:
+    - LS-Ubuntu
+
